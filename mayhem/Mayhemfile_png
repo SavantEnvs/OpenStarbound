@@ -1,0 +1,9 @@
+project: savantenvs/OpenStarbound
+target: png
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/png/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_png
+    libfuzzer: true
+    timeout: 10

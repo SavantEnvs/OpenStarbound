@@ -1,0 +1,9 @@
+project: savantenvs/OpenStarbound
+target: directives
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/directives/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_directives
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/OpenStarbound
+target: packed_assets
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/packed_assets/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_packed_assets
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/OpenStarbound
+target: btree_database
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/btree_database/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_btree_database
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/OpenStarbound
+target: lua
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lua/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_lua
+    libfuzzer: true
+    timeout: 10

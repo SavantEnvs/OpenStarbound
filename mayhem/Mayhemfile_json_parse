@@ -1,0 +1,9 @@
+project: savantenvs/OpenStarbound
+target: json_parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json_parse/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_json_parse
+    libfuzzer: true
+    timeout: 10
